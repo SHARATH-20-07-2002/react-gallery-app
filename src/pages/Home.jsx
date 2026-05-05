@@ -1,8 +1,14 @@
+import { useMemo } from "react";
+import "./Home.css";
+
 function Home() {
+  const randomNum = useMemo(() => Math.floor(Math.random() * 1000), []);
+
   return (
-    <div>
-      <h1>Home Page</h1>
-      <p>Welcome to the gallery project</p>
+    <div 
+      className="home"
+      style={{ backgroundImage: `url('https://picsum.photos/1600/900?${randomNum}')` }}
+    >
     </div>
   );
 }
